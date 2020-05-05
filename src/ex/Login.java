@@ -18,7 +18,8 @@ public class Login {
         final String password = scanner.nextLine();
 
         // Admin用アカウントにログインできるかチェック
-        if (AccountAdmin.loginCheck(id, password) == true) {
+        AccountAdmin accountAdmin = new AccountAdmin();
+        if (accountAdmin.loginCheck(id, password) == true) {
             System.out.println("ログインできました！");
         } else {
             System.out.println("ログインできませんでした。");
